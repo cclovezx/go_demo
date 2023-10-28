@@ -1,13 +1,18 @@
 package main
 
-import "packagestudy/struct/test3/model"
+import (
+	"fmt"
+	"packagestudy/struct/test3/model"
+)
 
-//声明结构体的所有方式
+//工厂模式进行实例化
 
 func main() {
-	//方式一：
 	s := model.NewStudent("cui", 16, 90.21)
 	s.SetName("cui")
-	//方式二：
+
+	s.SetAge(78)
+	s.SetScore(90.32)
+	fmt.Println(s.GetName(), s.GetAge(), s.GetScore())
 
 }
